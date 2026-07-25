@@ -1,0 +1,22 @@
+# AI Smart Travel Planning Assistant - dependencies
+# Targeted at Python 3.11. Tested resolution order: crewai first, then
+# streamlit, then the RAG stack. Run `pip check` after install to confirm
+# there are no conflicts in your environment.
+
+# --- Agent orchestration -----------------------------------------------
+crewai==1.14.6
+
+# --- UI -------------------------------------------------------------
+streamlit==1.59.2
+
+# --- LLM access (Hugging Face Inference Providers) ----------------------
+huggingface_hub>=0.35.0,<1.0.0
+
+# --- RAG stack: PDF parsing, embeddings, vector store -------------------
+pypdf>=5.0.0,<6.0.0
+sentence-transformers>=3.3.0,<4.0.0
+chromadb>=1.1.0,<2.0.0
+
+# --- Misc -----------------------------------------------------------
+python-dotenv>=1.0.1,<2.0.0
+requests>=2.32.0,<3.0.0
